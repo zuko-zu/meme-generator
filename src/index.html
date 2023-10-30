@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор мемов</title>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="visually-hidden">Генератор мемов</h1>
+  </header>
+  <main class="main">
+    <section class="editor">
+      <h2 class="visually-hidden">Редактор</h2>
+      <div class="editor__meme-area">
+        <p class="editor__text">Выберите шаблон</p>
+      </div>
+      <div class="editor__options options">
+        <div class="options__buttons">
+          <button class="options__add-template button">Выбрать шаблон</button>
+          <button class="options__add-text button" disabled>Добавить текст</button>
+          <button class="options__download button" disabled>Скачать мем</button>
+        </div>
+        
+        <div class="options__inputs">
+          <h3 class="options__title">Настройки текста</h3>
+          <p class="options__input-wrapper">
+            <label for="fontFamily" class="options__label">Выберите шрифт</label>
+            <select id="fontFamily" class="input options__input" disabled>
+              <option value="Arial">Arial</option>
+              <option value="Impact" selected>Impact</option>
+              <option value="arial-unicode-ms">arial-unicode-ms</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Courier">Courier</option>
+              <option value="Comic">Comic</option>
+              <option value="times-new-roman">times-new-roman</option>
+            </select>
+          </p>
+          <p class="options__input-wrapper">
+            <label for="fontSize" class="options__label">Введите размер шрифта</label>
+            <input type="number" class="input options__input" id="fontSize" min="0" max="100" placeholder="Введите размер шрифта" value="20" disabled>
+          </p> 
+          <p class="options__input-wrapper">
+            <label for="color" class="options__label">Выберите цвет текста</label>
+            <input class="input input__color options__input" type="color" id="color" disabled>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/index.js"></script>
+  <script type="module" src="./js/addImage.js"></script>
+  <script type="module" src="./js/download.js"></script>
+  <script type="module" src="./js/addText.js"></script>
+  <script type="module" src="./js/dragAndDrop.js"></script>
+  <script type="module" src="./js/changeTextStyles.js"></script>
+</body>
+</html>
